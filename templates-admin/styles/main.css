@@ -25,7 +25,7 @@ body {
 	
 }
 	body.modal {
-		background-color: #fff; 
+		background-color: #10161a;
 	}
 
 #masthead,
@@ -42,13 +42,14 @@ body {
 	max-width: 1200px; 
 	margin: 0 auto; 
 }
+.content .container{width:82%;}
+
 	body.modal .container {
 		margin: 0; 
-		width: 100%; 
+		width:97%;
 		min-width: 300px; 
 	}
-
-.content .container{width:82%;}
+	body.modal .container img{ width:95%; }
 
 a {
 	font-family: "Helvetica Neue", Arial, sans-serif; 
