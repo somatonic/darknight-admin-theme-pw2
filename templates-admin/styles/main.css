@@ -1,0 +1,485 @@
+@import url(reset.css); 
+@import url(JqueryUI/JqueryUI.css);
+
+/**********************************************************************************************
+ * ProcessWire Admin Control Panel - Skyscraper Theme - main.css
+ *
+ * This file provides the initial layout and styling for most admin control panel elements. 
+ * See also ui.css, which provides the final styling and overrides. 
+ *
+ * Copyright 2010 by Ryan Cramer
+ *
+ */
+
+
+/***********************************************************************************************
+ * GENERAL
+ *
+ */
+
+
+body {
+	background-color: #10161a; 
+	font: 10px/20px "Helvetica Neue", Arial, sans-serif; 
+	color: #485e6a; 
+	
+}
+	body.modal {
+		background-color: #fff; 
+	}
+
+#masthead,
+#content,
+#footer {
+	padding-right: 20px;
+	padding-left: 20px; 
+}
+
+.container {
+	position: relative; 
+	width: 85%; 
+	min-width: 800px; 
+	max-width: 1200px; 
+	margin: 0 auto; 
+}
+	body.modal .container {
+		margin: 0; 
+		width: 100%; 
+		min-width: 300px; 
+	}
+
+.content .container{width:82%;}
+
+a {
+	font-family: "Helvetica Neue", Arial, sans-serif; 
+	color: #f10055;
+		
+}
+	a:hover {
+		color: #fff; 
+		/*background: #f10055;*/
+	}
+
+	a.on {
+		color: #7a002b; 	
+	}
+
+.WireFatalError {
+	background: #a30000; 
+	color: #fff; 
+	padding: 1em; 
+	position: relative;
+	z-index: 9999;
+}
+
+
+li.ui-state-highlight,li.iui-state-error{ margin:1px 0 0 0;}
+a.PageListSelectActionToggle { color:#7a002b; }
+
+/***********************************************************************************************
+ * MASTHEAD
+ *
+ */
+
+#masthead {
+ 	background: url(images/bg.gif) top left repeat-x; 
+	height: 180px; 
+	font-size: 1.1em;
+}
+	body.modal #masthead {
+		display: none; 
+	}
+
+	#logo {
+		position: absolute; 
+		display:none;
+		right: 0px;
+		top: 43px; 
+		width: 179px;
+		height: 25px; 
+		text-indent: -9999px; 
+		background: url(images/logo.gif) top left no-repeat; 
+	}
+
+	#topnav {
+		position: absolute;
+		left: 0px; 
+		top: 12px;
+	}
+
+		#topnav li {
+			padding: 0;
+			list-style: none;
+            display: inline;
+			line-height: 1em; 
+		}
+
+			a.nav,
+			.nav a {
+				font-family: "Helvetica Neue", Arial, sans-serif; 
+				
+				
+			}
+				a.nav:hover,
+				.nav a:hover {
+					color: #fff; 
+				}
+
+			#topnav a, #topnav a:visited {
+				color: #83a2b3; 
+				display: block;
+				float: left; 
+				margin: 0;
+				font-size:14px;
+				font-weight:bold;
+				letter-spacing:0.05em;
+				padding: 10px 20px 10px 20px;
+				border-right: solid 1px #0e1215 ;
+				/*border-left: solid 1px #444f56 ;*/
+				box-shadow: inset 0px 0px 9px 2px rgba(0,10,20,0.2);
+				background: #1b2328;
+				text-transform: uppercase; 
+				text-shadow: 0px 0px 3px #000;
+			}
+
+			#topnav a:hover{
+				color: #a6c8da; 
+				/*background: #0f1920; url(images/topnav_a_bg.gif) top left repeat-x; */
+				box-shadow: inset 0px 0px 9px 2px rgba(0,10,20,0.5);
+			}
+			#topnav a.on {
+				color: #b3e2ff; 
+				position:relative;
+				box-shadow: inset 0px 0px 9px 2px rgba(0,0,50,0.8), 0px 0px 22px 2px rgba(0,154,245,0.7);
+				border-right: 0;
+				text-shadow: none;
+				background: #588fb0; /*url(images/topnav_a_bg.gif) top left repeat-x; */
+			}
+
+	#breadcrumb {
+		position: absolute; 
+		left: 20px; 
+		top:70px; 
+	}
+		#breadcrumb li {
+
+            padding: 1px 2px 1px 0px;
+			line-height: 1em;
+			font-size: 13px; 
+			display: inline;
+			position:relative;
+		}
+			#breadcrumb a {
+				color: #3c4f59; 
+				padding: 1px 2px 1px 0px;
+				text-shadow: 1px 1px 2px #000;
+	           	line-height: 1em;
+				float:left;
+				font-weight:bold;
+			}
+			#breadbrumb li span{ }
+			#breadcrumb a:hover {
+				color: #fff; 
+			}
+
+	#title {
+		font-size: 26px; 	
+		font-family: serif; 
+		color: #fff; 
+		margin: 0; 
+		position: absolute;
+		top: 135px; 
+        left: 20px;
+		white-space: nowrap; 
+	}
+
+	#ProcessPageSearchQuery {
+		position: absolute; 
+		top:65px;
+		right: 0; 
+		width: 150px; 
+		padding: 2px 5px;
+		height: 17px; 
+		border: none;
+		background-color:#000;
+		color:#485e6a;
+		border:1px solid #232c31;
+	}
+	#ProcessPageSearchQuery:focus {
+		
+		color:#fff;
+		
+	}
+	
+
+#userinfo_top{
+	position:absolute;top:67px; right: 200px;
+}
+#notices {
+	font-size: 1.3em; 
+}
+
+/***********************************************************************************************
+ * CONTENT
+ *
+ */
+
+#content {
+	position: relative; 
+	background: #070707;
+	padding-top: 2em; 
+	padding-bottom: 2em; 
+	font-family: sans-serif; 
+	font-size: 1.3em; 
+	box-shadow: 0 4px 5px 4px #000;
+}
+	#content .container {
+		min-height: 50px; 
+	}
+
+		.content img {
+			display: block;
+		}
+
+		.content .WireTabs a {
+			font-size: 1em;
+		}
+		.content .nav a.label {
+			font-size: 1em; 
+		}
+
+	.content p,
+	.content ul
+	.content ol,
+	.content table {
+		margin: 1em 0;
+	}
+
+	#content table th.header,
+	.content h4 {
+		font-family: "Helvetica Neue", Arial, sans-serif;
+		color: #b0ced8; 
+	}
+		#content table th.headerSortUp,
+		#content table th.headerSortDown,
+		#content table th:hover {
+			color: #690033;
+		}
+
+	.content table.AdminDataList {
+		margin-top: 0; 
+	}
+	
+	.content table.AdminDataList th{
+		color:#5f7683!important;
+		border-bottom:2px solid #1b2328;
+	}
+	.content table.AdminDataList th.headerSortDown{
+		color:#90aebe!important;
+		
+	}
+	.content table.AdminDataList td,
+	.content dl,.content dl dt{
+		border:0;
+		border-bottom:1px solid #1b2328;
+		
+	}
+	.content dl{border-bottom:0!important;}
+
+	
+	.content input,textarea { border-radius:5px; background: #fff; border:1px solid #333; color:#333; padding:5px; font-size:13px!important;}
+	.content iframe body { background-color:#000!important;}
+	
+	.content h2 {
+		font-family: sans-serif; 
+		margin: 1em 0;
+		padding: 0 0 0 15px;
+		font-size: 20px; 
+		line-height: 1.2em; 
+		color: #016297; 
+		font-weight:normal!important;
+	
+	}
+		.container > h2,
+		.container > form > h2 {
+			margin-top: 0;
+		}
+
+	.content h3 {
+		margin: 1em 0;
+		font-size: 1.5em; 
+	}
+
+	.content h4 {
+		margin: 1em 0 0.25em 0;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 0.916666666666667em;
+	}
+	.content ul, 
+	.content ol {
+	}
+
+		.content li {
+			margin: 1em 0; 
+			display: block;
+			list-style: disc; 
+		}
+
+		.content ol li {
+			display: list-item; 
+			list-style-type: decimal;
+			margin-left: 1em; 
+		}
+
+		/**
+		 * Actions: like the "|edit|view|new" in the PageList
+		 *
+		 */
+		.content ul.actions {
+		}
+			.content ul.actions li,
+			li.action {
+				display: inline; 
+				border-left: 1px solid #263943; 
+				padding: 0 1px; 
+				text-transform: lowercase; 
+			}
+
+			.content ul.actions li a,
+			li.action a {
+				padding: 0 5px 0 3px; 
+				border-bottom: none; 
+			}
+
+		/**
+		 * Content navigation like when on the root page of "templates" or "access"
+		 *
+		 */
+		.content dl {
+			margin: 1em 0;
+			border-bottom: 1px dotted #ccc; 
+		}
+			.content dt,
+			.content dt {
+				display: block;
+				font-weight: bold; 
+				border-top: 1px dotted #ccc; 
+				padding-top: 0.75em; 
+			}
+			.content dt a {
+				font-size: 1em;
+				text-transform: none; 
+			}
+			.content dl dd {
+				padding-bottom: 0.75em; 
+			}
+
+	.content .description {
+		font-family: sans-serif; 
+		font-style: italic;
+		color: #485e6a; 
+	}
+	.content .notes {
+		font-size: 0.91666em;
+		color: #587548; 
+		background: #222f1c;
+		padding:2px 5px;
+		font-style: italic;
+		margin:1em 0 0 0;
+	}
+
+	.content .error {
+		color: red;
+		text-transform: uppercase;
+		font-weight: bold; 
+		font-size: 0.9166666em;	
+	}
+
+
+
+/***********************************************************************************************
+ * FOOTER
+ *
+ */
+
+#footer {
+	margin: 2em 0 2em 0; 
+	font-size: 1.1em; 
+	color: #546873;
+	font-family: sans-serif; 
+}
+	body.modal #footer {
+		display: none; 
+	}
+	#footer p {
+		margin-top: 0;
+	}
+	#footer #userinfo {
+		display: block; 
+		float: right; 
+	}
+	#footer #userinfo a {
+		font-weight: bold; 
+		text-transform: uppercase; 
+	}
+
+	#debug {
+		margin-top: 2em; 
+	}
+		#debug .container {
+			width: 100%; 
+		}
+		#debug p {
+			margin: 1em 0; 
+		}
+		#debug ol {
+			margin: 1em 0; 
+		}
+		#debug h4 {
+			font-weight: bold; 
+		}
+
+
+
+/***********************************************************************************************
+ * MISC
+ *
+ */
+
+.align_left {
+	float: left;
+	margin: 0 1em 0.5em 0;
+}
+
+.align_right {
+	float: right;
+	margin: 0 0 0.5em 1em; 
+}
+
+.align_center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+.detail {
+	font-size: 0.9166em;
+	color: #999; 
+}
+
+#bgtitle {
+	font-family: Georgia, serif; 
+	margin: 0;
+	position: absolute; 
+	top: 130px; 
+	right: 20px; 
+	font-size: 142px; 
+	color: #fff; 
+	color: rgba(0, 0, 0, 0.3);
+}
+	body.modal #bgtitle {
+		display: none;
+	}
+	
+	
