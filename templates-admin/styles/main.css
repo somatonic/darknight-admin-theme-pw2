@@ -46,7 +46,7 @@ body {
 
 	body.modal .container {
 		margin: 0; 
-		width:97%;
+		width:96%;
 		min-width: 300px; 
 	}
 	body.modal .container img{ width:95%; }
