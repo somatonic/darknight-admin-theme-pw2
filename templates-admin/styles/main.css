@@ -21,7 +21,7 @@
 body {
 	background-color: #10161a; 
 	font: 10px/20px "Helvetica Neue", Arial, sans-serif; 
-	color: #485e6a; 
+	color: #5c7887; 
 	
 }
 	body.modal {
@@ -62,7 +62,7 @@ a {
 	}
 
 	a.on {
-		color: #7a002b; 	
+		color: #fff;
 	}
 
 .WireFatalError {
@@ -171,7 +171,7 @@ a.PageListSelectActionToggle { color:#7a002b; }
 			position:relative;
 		}
 			#breadcrumb a {
-				color: #3c4f59; 
+				color: #4f6875; 
 				padding: 1px 2px 1px 0px;
 				text-shadow: 1px 1px 2px #000;
 	           	line-height: 1em;
