@@ -32,15 +32,6 @@ $(document).ready(function() {
 		var $t = $(this); 
 		if(!$t.val() && !$t.is(".no_focus")) $t.focus();	
 	});
-	
-	
-	var iframe = $('#Inputfield_body_ifr');
-	iframe.load(function(){
-		iframe.contents().find("body").css({'background-color':'#000000'});
-		
-	});
-	$('textarea#Inputfield_body').css({'background-color':'#000000'});
-	
 
 	
 }); 
