@@ -14,7 +14,7 @@ if(!isset($content)) $content = '';
 
 $config->styles->prepend($config->urls->adminTemplates . "styles/main.css"); 
 $config->styles->append($config->urls->adminTemplates . "styles/ui.css"); 
-$config->scripts->append($config->urls->adminTemplates . "scripts/main.js"); 
+
 
 ?>
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/main.js");
 			<p id="logo">ProcessWire</p>
 
 			<ul id='topnav' class='nav'>
-				<?php include($config->paths->templatesAdmin . "topnav.inc"); ?>
+				<?php include($config->url->templatesAdmin . "topnav.inc"); ?>
 			</ul>
 
 			<?php if(!$user->isGuest()): ?>
@@ -79,7 +79,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/main.js");
 				?>
 			</ul>
 			<?php endif; ?>	
-			
+
 			<?php if(!$user->isGuest()): ?>
 			<span id='userinfo_top'>
 				<?php echo $user->name?>  
@@ -136,6 +136,8 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/main.js");
 			<?php if($config->debug && $this->user->isSuperuser()) include($config->paths->adminTemplates . "debug.inc"); ?>
 		</div>
 	</div>
-
+<?php
+ echo '<script src="'.$config->urls->adminTemplates .'scripts/main.js"></script>';
+?>
 </body>
 </html>

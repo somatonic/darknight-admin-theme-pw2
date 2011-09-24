@@ -12,9 +12,7 @@ test*.php\
 test_*\
 ___*.php\
 .tmp*\
+*.psd
 \
-.DS_Store\
-\
-\
-\
+.DS_Store
 }

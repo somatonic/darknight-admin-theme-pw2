@@ -28,9 +28,20 @@ $(document).ready(function() {
 		$("#content .container").html("<h2>ProcessWire does not support IE7 and below at this time. Please try again with a newer browser.</h2>").show();
 	}
 
-	jQuery('#content input[type=text]:visible:enabled:first').each(function() {
+	$('#content input[type=text]:visible:enabled:first').each(function() {
 		var $t = $(this); 
 		if(!$t.val() && !$t.is(".no_focus")) $t.focus();	
 	});
+	
+	
+	var iframe = $('#Inputfield_body_ifr');
+	iframe.load(function(){
+		iframe.contents().find("body").css({'background-color':'#000000'});
+		
+	});
+	$('textarea#Inputfield_body').css({'background-color':'#000000'});
+	
 
+	
 }); 
+
