@@ -15,7 +15,7 @@ if(!isset($content)) $content = '';
 $config->styles->prepend($config->urls->adminTemplates . "styles/main.css"); 
 $config->styles->append($config->urls->adminTemplates . "styles/ui.css"); 
 
-$config->scripts->append($config->urls->adminTemplates . 'scripts/main.js"></script>');
+$config->scripts->append($config->urls->adminTemplates . "scripts/main.js"); 
 
 
 ?>
